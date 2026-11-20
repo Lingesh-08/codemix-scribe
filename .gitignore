@@ -1,0 +1,19 @@
+ai-service/.venv/
+ai-service/models/
+ai-service/test_outputs/
+ai-service/.env
+__pycache__/
+backend/target/
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Confidential clinical data (SNOMED CT / ICD-10 maps, patient datasets): never commit
+ai-service/private/
+private/
+der2_*
+sct2_*
+*ExtendedMap*
+
+# Supabase connection (contains the database password)
+backend/supabase.env

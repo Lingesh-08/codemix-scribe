@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  /* UI text: Plus Jakarta Sans for Latin, Noto for Tamil / Devanagari glyphs */
+  --font-sans: "Plus Jakarta Sans", "Noto Sans Tamil", "Noto Sans Devanagari", "Noto Sans", system-ui, sans-serif;
+  /* Transcript text: one family that renders all three scripts evenly */
+  --font-script: "Noto Sans", "Noto Sans Tamil", "Noto Sans Devanagari", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --animate-caret: caret 1s steps(1) infinite;
+  --animate-fade-in: fade-in 0.35s ease-out both;
+  --animate-ring: ring 1.8s cubic-bezier(0.2, 0.6, 0.3, 1) infinite;
+
+  @keyframes caret {
+    50% { opacity: 0; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes ring {
+    0% { transform: scale(1); opacity: 0.55; }
+    100% { transform: scale(1.75); opacity: 0; }
+  }
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+::selection {
+  @apply bg-indigo-200;
+}
+
+/* thin scrollbars inside panels */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(203 213 225) transparent;
+}

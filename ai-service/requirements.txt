@@ -1,0 +1,11 @@
+faster-whisper>=1.1.1
+fastapi>=0.115
+uvicorn[standard]>=0.32
+python-multipart>=0.0.12
+httpx>=0.27
+python-dotenv>=1.0
+PyJWT>=2.9
+numpy>=1.26,<3
+# CUDA 12 runtime DLLs for ctranslate2 on Windows (cuBLAS + cuDNN 9)
+nvidia-cublas-cu12
+nvidia-cudnn-cu12==9.*

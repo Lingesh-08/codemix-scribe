@@ -1,0 +1,17 @@
+# PostgreSQL for CodeMix Scribe.  Start:  docker compose up -d     Stop:  docker compose down
+services:
+  postgres:
+    image: postgres:16
+    container_name: scribe-postgres
+    environment:
+      POSTGRES_DB: scribe
+      POSTGRES_USER: scribe
+      POSTGRES_PASSWORD: scribe
+    ports:
+      - "5432:5432"
+    volumes:
+      - scribe-pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  scribe-pgdata:
